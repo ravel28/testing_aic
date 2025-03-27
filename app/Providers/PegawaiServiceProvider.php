@@ -6,18 +6,18 @@ use Illuminate\Support\ServiceProvider;
 use App\Interfaces\PegawaiServiceInterface;
 use App\Repositories\PegawaiService;
 
-class AppServiceProvider extends ServiceProvider
+class PegawaiServiceProvider extends ServiceProvider
 {
     /**
-     * Register any application services.
+     * Register services.
      */
     public function register(): void
     {
-        $this->app->bind(PegawaiServiceInterface::class, PegawaiService::class);
+        $this->app->bind(PegawaiServiceInterface::class,PegawaiService::class);
     }
 
     /**
-     * Bootstrap any application services.
+     * Bootstrap services.
      */
     public function boot(): void
     {

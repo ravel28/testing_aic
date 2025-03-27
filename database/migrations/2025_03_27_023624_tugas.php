@@ -25,7 +25,7 @@ return new class extends Migration
             $table->timestamp('jam_mulai');
             $table->timestamp('jam_selesai');
             $table->timestamps();
-            $table->foreignId('pegawai_id')->constrained('pegawai')->onDelete('cascade');
+            $table->foreignId('pegawai_id')->constrained('pegawais')->onDelete('cascade');
         });
     }
 
