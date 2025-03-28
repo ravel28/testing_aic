@@ -9,5 +9,5 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 // Pegawai Module
-Route::get('/pegawai/', [PegawaiController::class, 'index']);
+Route::get('/pegawai/{take}', [PegawaiController::class, 'allPegawai']);
 Route::post('/pegawai/create/', [PegawaiController::class, 'createPegawai']);

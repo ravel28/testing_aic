@@ -10,6 +10,14 @@ if (file_exists($maintenance = __DIR__.'/../storage/framework/maintenance.php'))
     require $maintenance;
 }
 
+header("Access-Control-Allow-Origin: *");
+//header("Access-Control-Allow-Methods", "DELETE, POST, GET, OPTIONS");
+header("Access-Control-Allow-Headers:*");
+
+if ($_SERVER['REQUEST_METHOD'] == "OPTIONS") {//send back preflight request response
+return "";
+}
+
 // Register the Composer autoloader...
 require __DIR__.'/../vendor/autoload.php';
 

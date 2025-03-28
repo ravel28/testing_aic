@@ -16,7 +16,7 @@ class PegawaiService implements PegawaiServiceInterface
         try {
             $take   = $query['take'];
             $page   = $query['page'] ?? 1;
-            $user   = Pegawai::orderby('pegawai.name','asc')
+            $user   = Pegawai::orderby('pegawais.name','asc')
                             ->paginate($take);
             $total  = Pegawai::all()->count();
 
